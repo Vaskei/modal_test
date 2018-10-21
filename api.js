@@ -1,4 +1,4 @@
-$(".alertFadeout").delay(1000).fadeOut();
+$(".alertFadeout").delay(2000).fadeOut();
 
 $(document).ready(function () {
   $('#editModal').on('show.bs.modal', function (e) {

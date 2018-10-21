@@ -1,5 +1,21 @@
 <?php session_start(); ?>
 <?php require_once "db.php"; ?>
+<?php
+function displayMsgLeft()
+{
+  if (isset($_SESSION['msg']) && $_SESSION['msg'] != '') {
+    echo $_SESSION['msg'];
+    unset($_SESSION['msg']);
+  }
+}
+function displayMsgRight()
+{
+  if (isset($_SESSION['msg']) && $_SESSION['msg'] != '') {
+    echo $_SESSION['msg'];
+    unset($_SESSION['msg']);
+  }
+}
+?>
 
 <!doctype html>
 <html lang="en">
@@ -21,7 +37,7 @@
 </head>
 
 <body>
-  <div class="container">    
+  <div class="container">
 
     <!-- Button trigger modal -->
     <div class="text-center mt-5">
@@ -145,14 +161,10 @@
 
 
     <div class="container text-center mt-5">
-      <h1>Data</h1>
-
-      <?php
-      if (isset($_SESSION['msg']) && $_SESSION['msg'] != '') {
-        echo $_SESSION['msg'];
-        unset($_SESSION['msg']);
-      }
-      ?>
+      <h1 class="mb-0">
+        Data
+      </h1>
+      <span class="lead p-2 font-weight-bold"><?php displayMsgRight(); ?></span>
 
       <table class="table table-dark">
         <thead>

@@ -12,10 +12,10 @@ if (isset($_POST['submit'])) {
   $query = $db->prepare("INSERT INTO modal_data (input1, input2) VALUES (?, ?)");
   $query->bind_param("ss", $input1, $input2);
   if ($query->execute()) {
-    $_SESSION['msg'] = '<div class="alert alert-warning text-center alertFadeout"><strong>Podatak unesen.</strong></div>';
+    $_SESSION['msg'] = '<span class="alertFadeout text-success">Podatak unesen.</span>';
     header("Location: .");
   } else {
-    $_SESSION['msg'] = '<div class="alert alert-warning text-center alertFadeout"><strong>Greška.</strong></div>';
+    $_SESSION['msg'] = '<span class="alertFadeout text-danger">Greška.</span>';
     header("Location: .");
   }
 }

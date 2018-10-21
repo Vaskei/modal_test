@@ -10,10 +10,10 @@ if (isset($_POST['delete'])) {
   $query = $db->prepare("DELETE FROM modal_data WHERE id=?");
   $query->bind_param("i", $deleteID);
   if ($query->execute()) {
-    $_SESSION['msg'] = '<div class="alert alert-danger text-center alertFadeout"><strong>Podatak izbrisan.</strong></div>';
+    $_SESSION['msg'] = '<span class="alertFadeout text-warning">Podatak izbrisan.</span>';
     header("Location: .");
   } else {
-    $_SESSION['msg'] = '<div class="alert alert-warning text-center alertFadeout"><strong>Greška.</strong></div>';
+    $_SESSION['msg'] = '<span class="alertFadeout text-danger">Greška.</span>';
     header("Location: .");
   }
 }

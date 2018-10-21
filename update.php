@@ -12,10 +12,10 @@ if (isset($_POST['edit'])) {
   $query = $db->prepare("UPDATE modal_data SET input1=?, input2=? WHERE id=?");
   $query->bind_param("ssi", $editInput1, $editInput2, $editID);
   if ($query->execute()) {
-    $_SESSION['msg'] = '<div class="alert alert-warning text-center alertFadeout"><strong>Podatak izmijenjen.</strong></div>';
+    $_SESSION['msg'] = '<span class="alertFadeout text-success">Podatak izmijenjen.</span>';
     header("Location: .");
   } else {
-    $_SESSION['msg'] = '<div class="alert alert-warning text-center alertFadeout"><strong>Greška.</strong></div>';
+    $_SESSION['msg'] = '<span class="alertFadeout text-danger">Greška.</span>';
     header("Location: .");
   }
 }
