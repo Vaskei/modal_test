@@ -29,6 +29,9 @@ function displayMsgRight()
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
 
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
     crossorigin="anonymous">
@@ -200,8 +203,8 @@ function displayMsgRight()
             </td>
             <td style="width:15%">
               <?php echo "<div class='btn-group' role='group'>
-                          <button type='button' class='btn btn-info' data-toggle='modal' data-target='#editModal' data-id='" . $id . "'>Edit</button>
-                          <button type='button' class='btn btn-danger' data-toggle='modal' data-target='#deleteModal2' data-id='" . $id . "' data-record-title='" . $input1 . " " . $input2 . "'>Delete</button>
+                          <button type='button' class='btn btn-info btn-table' data-toggle='modal' data-target='#editModal' data-id='" . $id . "'>Edit</button>
+                          <button type='button' class='btn btn-danger btn-table' data-toggle='modal' data-target='#deleteModal2' data-id='" . $id . "' data-record-title='" . $input1 . " " . $input2 . "'>Delete</button>
                         </div>" ?>
             </td>
           </tr>
